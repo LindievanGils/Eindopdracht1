@@ -1,3 +1,8 @@
+:root {
+    --groen: #7B8A56;
+    --blauw: #174D5A;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +19,29 @@ header
 {
     top: 0;
     height: 100px;
-    background-color: #7B8A56; /*groen*/
+    background-color: var(--groen); /*groen*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-h1{
+header h1{
     color: white;
+    margin-left: 20px;
 }
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 10px;
+    font-size: 20px;
+}
+nav ul li:last-child{
+    margin: 0 20px 0 10px;
+}
+
+/***********************MENU**************************/
+
 
 /****************************CONTENT***************************/
 main{
@@ -46,7 +69,7 @@ footer{
     bottom: 0;
 
 
-    background-color: #174D5A;
+    background-color: var(--blauw);
     color: darkcyan;
 }
 
