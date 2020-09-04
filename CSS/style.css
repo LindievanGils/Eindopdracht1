@@ -1,17 +1,20 @@
-:root {
-    --groen: #7B8A56;
-    --blauw: #174D5A;
-  }
+@font-face {
+    font-family: GloriaHallelujah;
+    src: url("../fonts/GloriaHallelujah-Regular.ttf");
+}
+@font-face {
+    font-family: Raleway;
+    src: url("../fonts/Raleway-VariableFont_wght.ttf");
+}
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'tahoma';
+    font-family: 'Raleway';
 }
 html{
     height: 100%;
     width: 100%;
-    /*background-color: #F2E4D6;*/
 }
 
 /***********************HEADER**************************/
@@ -19,44 +22,47 @@ header
 {
     top: 0;
     height: 100px;
-    background-color: var(--groen); /*groen*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header h1{
     color: white;
+
+}
+
+div#menu{
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    height: 35px;
+    background-color:#7F9DAC;
+}
+h1{
+    font-family: "GloriaHallelujah";
     margin-left: 20px;
-}
-nav ul{
-    display: flex;
-    list-style: none;
-}
-nav ul li{
-    margin: 0 10px;
-    font-size: 20px;
-}
-nav ul li:last-child{
-    margin: 0 20px 0 10px;
+    font-size: 40px;
+    color: #260D00;
 }
 
-/***********************MENU**************************/
 
-
+header img{
+    position: absolute;
+    right: 50px;
+    top: 0;
+    z-index: 10;
+    height: 100px;
+    width: 100px;
+}
 /****************************CONTENT***************************/
 main{
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 185px);
     width: 100%;
     height: fit-content;
-    background-color: #F2E4D6;
+    background-color: #F5F5F5;
     padding-top: 20px;
     padding-bottom: 40px;
 }
 
 #content{
-    margin: 0 100px 0 100px;
+    margin: 0 10% 0 10%;
     background-color: white;
-    width: calc(100% - 220px);
+    width: calc(80% - 50px);
     height: fit-content;
     min-height: 100px;
     padding: 20px;
@@ -65,15 +71,11 @@ main{
 /**************************FOOTER*****************************/
 footer{
     width: 100%;
-    height: 40px;
+    height: 25px;
     bottom: 0;
-
-
-    background-color: var(--blauw);
-    color: darkcyan;
-}
-
-footer p{
+    background-color: gray;
     text-align: center;
+    color: white;
 }
+
 
