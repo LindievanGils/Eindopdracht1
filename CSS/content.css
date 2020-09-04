@@ -1,0 +1,44 @@
+#email{
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+#email:hover{
+    text-decoration: underline;
+}
+
+
+/*Table*/
+
+table{
+    max-width: 700px;
+}
+
+td.label{
+    width: 140px;
+}
+td{
+    padding: 5px;
+    width: 100px;
+}
+/*text velden*/
+td input{
+    min-width: 200px;
+}
+
+/*input bericht*/
+input#bericht{
+    height: 100px;
+}
+
+/*submit button*/
+button{
+    background-color: lightgrey;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+button:hover{
+    background-color: gray;
+}
