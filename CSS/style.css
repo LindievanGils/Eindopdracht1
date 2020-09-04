@@ -63,14 +63,14 @@ header img{
     color:white;
     text-decoration: none;
     font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 #current{
-    /*border-bottom: 5px solid gray;*/
-    font-weight: bold;
+    border-bottom: 5px solid gray;
 }
 #menu a:hover{
-    font-weight: bold;
-    text-decoration: underline;
+    color: #cdcdcd;
 }
 
 /****************************CONTENT***************************/
