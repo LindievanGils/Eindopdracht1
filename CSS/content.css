@@ -6,6 +6,12 @@
 #email:hover{
     text-decoration: underline;
 }
+h1,h2,h3{
+    margin-bottom: 5px;
+}
+p:not(#footerP){
+    margin-bottom: 25px;
+}
 
 
 /*Table*/
@@ -42,3 +48,29 @@ button{
 button:hover{
     background-color: gray;
 }
+
+/*geschiedenis van honden*/
+#imgGeschiedenis{
+    padding: 10px 10% 30px 10%;
+    width: 80%;
+}
+
+/*onstaan van rassen*/
+#rassenImg{
+    float: right;
+    margin: 40px;
+    width: calc(100% - 80px);
+    max-width: 600px ;
+
+
+}
+
+#yellow{
+    background-color: #fde94f;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    }
+
+

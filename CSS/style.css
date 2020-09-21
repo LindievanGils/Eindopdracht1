@@ -81,6 +81,7 @@ main{
     background-color: #F5F5F5;
     padding-top: 20px;
     padding-bottom: 40px;
+
 }
 
 #content{
@@ -92,6 +93,7 @@ main{
     padding: 20px;
 }
 
+
 /**************************FOOTER*****************************/
 footer{
     width: 100%;
@@ -102,4 +104,13 @@ footer{
     color: white;
 }
 
+/***************************FLEXBOX****************************/
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
 
+.flex-container > div {
+    flex: 0 50%;
+}
