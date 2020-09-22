@@ -13,9 +13,7 @@ p:not(#footerP){
     margin-bottom: 25px;
 }
 
-
 /*Table*/
-
 table{
     max-width: 700px;
 }
@@ -49,20 +47,18 @@ button:hover{
     background-color: gray;
 }
 
-/*geschiedenis van honden*/
+/***************geschiedenis van honden**********/
 #imgGeschiedenis{
     padding: 10px 10% 30px 10%;
     width: 80%;
 }
 
-/*onstaan van rassen*/
+/*****************onstaan van rassen************/
 #rassenImg{
     float: right;
     margin: 40px;
     width: calc(100% - 80px);
     max-width: 600px ;
-
-
 }
 
 #yellow{
@@ -71,6 +67,16 @@ button:hover{
     width: fit-content;
     padding: 20px;
     border-radius: 20px;
-    }
+    margin-bottom: 20px;
+}
 
-
+/*********************afbeeldingen pagina**************/
+.rassenAfbeelding > img{
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+.wrap    {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}

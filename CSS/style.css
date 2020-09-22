@@ -107,10 +107,13 @@ footer{
 /***************************FLEXBOX****************************/
 .flex-container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.flex-container > div {
-    flex: 0 50%;
+.wrap    {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
 }
+
