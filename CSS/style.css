@@ -47,8 +47,8 @@ header img{
     right: 50px;
     top: 0;
     z-index: 10;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
 }
 
 #menu ul{
@@ -116,4 +116,7 @@ footer{
     flex-wrap: wrap;
     text-align: center;
 }
+
+/***************** MEDIA QUERY MENU******************************/
+
 
