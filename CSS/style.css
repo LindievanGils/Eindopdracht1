@@ -73,6 +73,10 @@ header img{
     color: #cdcdcd;
 }
 
+#hamburger{
+    display: none;
+}
+
 /****************************CONTENT***************************/
 main{
     min-height: calc(100vh - 185px);
@@ -120,9 +124,49 @@ footer{
 /***************** MEDIA QUERY MENU******************************/
 
 @media only screen and (max-width: 1024px)  {
-    main{
-        background-color: yellow;
+    #menu ul{
+        flex-direction: column;
     }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header img{
+        display: none;
+    }
+    nav#menu{
+        display: none;
+        transition: transform 2s ease-in-out;
+        height: auto;
+        overflow: hidden;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    #hamburger{
+        display: inline-block;
+    }
+    #close-hamburger{
+        display: none;
+    }
+    nav#menu:target{
+        display: flex;
+        transform: scaleY(1);
+        margin-top: 20px;
+    }
+    nav#menu:target ~ #hamburger #open-hamburger{
+        display: none;
+    }
+    nav#menu:target ~ #hamburger #close-hamburger{
+        display: inline-block;
+    }
+    
+    #hamburger img{
+        display: inline-block;
+        position: static;
+        padding-right: 20px;
+    }
+    
 
 }
 
