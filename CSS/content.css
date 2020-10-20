@@ -1,3 +1,4 @@
+/************** contact pagina **************/
 #email{
     color: dodgerblue;
     font-weight: bold;
@@ -13,7 +14,7 @@ p:not(#footerP){
     margin-bottom: 25px;
 }
 
-/*Table*/
+/*******Table**********/
 table{
     max-width: 700px;
 }
@@ -25,7 +26,7 @@ td{
     padding: 5px;
     width: 100px;
 }
-/*text velden*/
+/****text velden*/
 td input{
     min-width: 200px;
 }
@@ -55,19 +56,92 @@ button:hover{
 
 /*****************onstaan van rassen************/
 #rassenImg{
-    float: right;
     margin: 40px;
-    width: calc(100% - 80px);
-    max-width: 600px ;
+    width: 600px;
+    float: right;
 }
 
-#yellow{
+#wistJeDat{
     background-color: #fde94f;
-    height: fit-content;
-    width: fit-content;
-    padding: 20px;
-    border-radius: 20px;
+    height: 70px;
+    width: 360px;
+    padding: 20px 8px 40px 20px;
     margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+#chowChowImg{
+    width: 100px;
+}
+
+/**********************rassen pagina ******************/
+.ras-box{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.ras-box p span:hover{
+    text-decoration: underline;
+}
+
+.ras-box img{
+    height: 400px;
+    width: 400px;
+}
+
+.ras-content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0,0,0,.6);
+    padding: 5px 0;
+    color: white;
+}
+.ras-content p{
+    padding: 0;
+    height: 0;
+    max-height: 0;
+    transition: max-height 2.5s;
+    opacity: 0;
+}
+
+.ras-box:hover p{
+    opacity: 1;
+    max-height: 1000px;
+    height: auto;
+    padding: 5px;
+}
+
+/******************** detail pagina rassen ********************/
+#ras-img {
+    float: right;
+    max-width: 30%;
+}
+
+/*********************afbeeldingen pagina**************/
+.rassenAfbeelding > img{
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+.wrap .afbeeldingen {
+    text-align: center;
+}
+
+
+/********************** wie zijn wij************************/
+.wieZijnWij img{
+    float: right;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+#content.wieZijnWij{
+ min-height: 300px;
 }
 
 /***************************FLEXBOX****************************/
@@ -82,87 +156,89 @@ button:hover{
     flex-wrap: wrap;
 
 }
-/*********************afbeeldingen pagina**************/
-.rassenAfbeelding > img{
-    width: 250px;
-    height: 250px;
-    margin: 20px;
-}
-.wrap .afbeeldingen {
-    text-align: center;
-}
-
-/********************** wie zijn wij************************/
-.flex-container .wieZijnWij{
- flex-direction: row;
-    justify-content: flex-start;
-}
-
-.wieZijnWij p{
-    width: 50%;
-}
-
-.wieZijnWij img{
-    width: 50%;
-}
-/********************* van Noah **************************************/
-#ras-list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    column-gap: 50px;
-}
-
-#ras-list img{
-    max-width: 100%;
-    height: auto;
-}
-.ras-box{
-    position: relative;
-    height: 100%;
-    margin-bottom: 30px;
-    overflow: hidden;
-}
-.ras-content{
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 35px;
-    background-color: rgba(0,0,0,.6);
-    padding: 5px 0;
-    color: white;
-}
-.ras-content p{
-    padding: 0;
-    height: 0;
-    max-height: 0;
-    transition: max-height 2.5s;
-    opacity: 0;
-}
-.ras-box:hover p{
-    opacity: 1;
-    max-height: 1000px;
-    height: auto;
-    padding: 5px;
-}
-
-#ras-img{
-    float: right;
-    max-width: 30%;
-}
-
-
 
 /***************** MEDIA QUERY MENU******************************/
 
 @media only screen and (max-width: 1024px)  {
-    main{
-        background-color: yellow;
+       /*geschiedenis pagina*/
+    #imgGeschiedenis{
+        padding: 4px 2% 0px 2%;
+        width: 96%;
+    }
+
+    /*rassen pagina*/
+    .ras-box, .ras-box img{
+        height: 350px;
+        width: 350px;
+    }
+
+    /* aanpassen animatie voor mobiele apparaten*/
+    .ras-box:hover p{
+        opacity: 0;
+        max-height: 0px;
+        height: auto;
+        padding: 5px;
+    }
+
+    /*onstaan van rassen pagina*/
+    #wistJeDat {
+        background-color: #fde94f;
+        height: fit-content;
+        width: 50%;
+        padding: 20px 2.5% 40px 2.5%;
+        margin: 20px 22.5% 20px 22.5%;
+        border-radius: 20px;
+    }
+
+    #rassenImg{
+        margin: 10px 10% 20px 10%;
+        width: 80%;
+    }
+
+    /* wie zijn wij pagina*/
+    .wieZijnWij img{
+        width: 300px;
+        float: left;
+        margin-right: 20px;
     }
 }
 
-@media screen and (max-width: 600px) {
-    main {
-        background-color: purple;
+
+
+@media screen and (max-width: 480px) {
+
+    /*geschiedenis pagina*/
+    #imgGeschiedenis{
+        padding: 0;
+        width: 100%;
     }
+
+    /*rassen pagina*/
+    .ras-box, .ras-box img{
+        height: 200px;
+        width: 200px;
+    }
+
+    /*ontsaan van rassen pagina*/
+    #wistJeDat{
+        background-color: #fde94f;
+        height: fit-content;
+        width: 80%;
+        padding: 20px 2.5% 40px 2.5%;
+        margin: 20px 7.5% 20px 7.5%;
+        border-radius: 20px;
+    }
+
+    #rassenImg{
+        margin: 0 2.5% 20px 2.5%;
+        width: 95%;
+    }
+
+    /* wie zijn wij pagina*/
+    .wieZijnWij img{
+       width: 100%;
+    }
+
+
+
 }
