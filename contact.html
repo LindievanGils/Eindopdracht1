@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <title>Title</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/content.css">
@@ -10,11 +10,11 @@
 <body>
 <header>
     <h1>Honden info</h1>
-    <img src="afbeeldingen/Logo.png" height="400" width="400"/>
+    <img src="afbeeldingen/Logo.png" height="400" width="400" alt="Illustratie hond"/>
     <nav id="menu">
         <ul>
-            <li><a href="index.html" >Home</a></li>
-            <li><a href="geschiedenis.html" >Geschiedenis</a></li> <!--tekst pagina over rassen geschiedenis-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="geschiedenis.html">Geschiedenis</a></li> <!--tekst pagina over rassen geschiedenis-->
             <li><a href="ontstaanRassen.html">Ontstaan van rassen</a></li>
             <li><a href="rassen.html">Rassen</a></li>
             <li><a href="afbeeldingen.html">afbeeldingen</a></li>
@@ -22,6 +22,10 @@
             <li><a href="contact.html" id="current">Contact</a></li>
         </ul>
     </nav>
+    <div id="hamburgerMenu">
+        <a href="#menu" id="open-hamburger"><img alt="hamburger-icon" src="afbeeldingen/menu.png"></a>
+        <a href="#" id="close-hamburger"><img alt="close-hamburger" src="afbeeldingen/close.png"></a>
+    </div>
 </header>
 <main>
     <section id="content">
@@ -29,34 +33,66 @@
             Contact
         </h2>
         <br>
-       <p>Bij vragen kunt u contact met ons opnemen met het contact formulier op deze pagina, of door een mail te sturen naar <span id="email">hondeninfor@example.com</span></p>
+        <p>Bij vragen kunt u contact met ons opnemen met het contact formulier op deze pagina, of door een mail te
+            sturen naar <a href="mailto:lr.vangils@student.avans.nl" class="email">lr.vangils@student.avans.nl</a> of
+            <a href="mailto:n.schreuders@student.avans.nl" class="email">n.schreuders@student.avans.nl</a>
+
+        </p>
         <p>Wij zullen u vraag zo spoedig mogelijk beantwoorden </p>
         <br>
         <table>
             <tr>
-                <td class="label"> Naam</td>
-                <td><input type="text"></td>
+                <td>
+                    <label>
+                        Naam:
+                    </label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
             </tr>
             <tr>
-                <td class="label">Email-adress</td>
-                <td><input type="text"></td>
+                <td>
+                    <label>
+                        Email-adress:
+                    </label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
             </tr>
             <tr>
-                <td class="label">Onderwerp</td>
-                <td><input type="text"></td>
+                <td>
+                    <label>
+                        Onderwerp:
+                    </label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
             </tr>
             <tr>
-                <td class="label">Bericht</td>
-                <td><input type="text" id="bericht"></td>
+                <td>
+                    <label>
+                        Bericht:
+                    </label>
+               </td>
+                <td>
+                    <input type="text" id="bericht">
+                </td>
             </tr>
             <tr>
-                <td><button>Versturen</button></td>
+                <td>
+                    <button>Versturen *</button>
+                </td>
             </tr>
         </table>
+        <br>
+        <p>* formulier is momenteel buitengebruik.</p>
     </section>
 </main>
 <footer>
-    <p id="footerP">honden info, 2020 </p>
+    <p>honden info, 2020 </p>
 </footer>
 </body>
 </html>

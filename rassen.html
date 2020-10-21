@@ -2,73 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <title>Title</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/content.css">
 </head>
 <body>
-    <header>
-        <h1>Honden info</h1>
-        <img src="afbeeldingen/Logo.png" height="400" width="400"/>
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="geschiedenis.html">Geschiedenis</a></li> <!--tekst pagina over rassen geschiedenis-->
-                <li><a href="ontstaanRassen.html">Ontstaan van rassen</a></li>
-                <li><a href="rassen.html" id="current">Rassen</a></li> <!--overzichts pagina-->
-                <li><a href="afbeeldingen.html">afbeeldingen</a></li>
-                <li><a href="wieZijnWij.html">Wie zijn wij</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>Honden info</h1>
+    <img src="afbeeldingen/Logo.png" height="400" width="400" alt="Illustratie hond"/>
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="geschiedenis.html">Geschiedenis</a></li> <!--tekst pagina over rassen geschiedenis-->
+            <li><a href="ontstaanRassen.html">Ontstaan van rassen</a></li>
+            <li><a href="rassen.html" id="current">Rassen</a></li> <!--overzichts pagina-->
+            <li><a href="afbeeldingen.html">afbeeldingen</a></li>
+            <li><a href="wieZijnWij.html">Wie zijn wij</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="hamburgerMenu">
+        <a href="#menu" id="open-hamburger"><img alt="hamburger-icon" src="afbeeldingen/menu.png"></a>
+        <a href="#" id="close-hamburger"><img alt="close-hamburger" src="afbeeldingen/close.png"></a>
+    </div>
+</header>
 
-        <main>
-            <section id="content">
-                <h2> Afbeelding van rassen</h2>
-                <br>
-                <div class="flex-container wrap">
-                    
-                    <div class="ras-box">
-                        <a href="rassen/bulldog.html">
-                            <img src="afbeeldingen/bulldog.jpg" alt="bulldog">
-                            <div class="ras-content">
-                                <h2>Bulldog</h2>
-                                <p>De Engelse Bulldog is een zachtaardige, sterke en soms eigenzinnige hond met een apart uiterlijk. <span>lees verder... </span></p>
-                            </div>
-                        </a>
-                    </div>
+<main>
+    <section id="content">
+        <h2> Afbeelding van rassen</h2>
+        <br>
+        <div class="flex-container wrap">
 
-                    <div class="ras-box">
-                        <img src="afbeeldingen/witteherder.jpg" alt="witte herder">
-                        <div class="ras-content">
-                            <h2>Witte herder</h2>
-                            <p>Zwitserse Witte Herdershonden zijn intelligente, actieve en zachtaardige honden. Ze werken graag voor en met hun eigenaar en zijn aanhankelijk. <span>lees verder... </span></p>
-                        </div>
+            <div class="ras-box">
+                <a href="rassen/bulldog.html">
+                    <img src="afbeeldingen/bulldog.jpg" alt="bulldog">
+                    <div class="ras-content">
+                        <h2>Bulldog</h2>
+                        <h4 class="readInfo">Ga naar pagina</h4>
+                        <p>De Engelse Bulldog is een zachtaardige, sterke en soms eigenzinnige hond met een apart
+                            uiterlijk. <span>lees verder... </span></p>
                     </div>
+                </a>
+            </div>
 
-                    <div class="ras-box">
-                        <img src="afbeeldingen/labrador.jpg" alt="labrador">
-                        <div class="ras-content">
-                            <h2>Labrador</h2>
-                            <p>De Labrador Retriever is een enorm populaire hond. De Labrador Retriever is van oorsprong een apporterende (jacht)hond, maar nu erg gewild als gezinshond. <span>lees verder... </span></p>
-                        </div>
+            <div class="ras-box">
+                <a href="rassen/herder.html">
+                    <img src="afbeeldingen/witteherder.jpg" alt="Witte herder">
+                    <div class="ras-content">
+                        <h2>Witte herder</h2>
+                        <h4 class="readInfo">Ga naar pagina</h4>
+                        <p>Zwitserse Witte Herdershonden zijn intelligente, actieve en zachtaardige honden. Ze werken
+                            graag voor en met hun eigenaar en zijn aanhankelijk. <span>lees verder... </span></p>
                     </div>
+                </a>
+            </div>
 
-                    <div class="ras-box">
-                        <img src="afbeeldingen/poedel.jpg" alt="poedel">
-                        <div class="ras-content">
-                            <h2>Poedel</h2>
-                            <p>De Poedel is een zeer oud ras. Er bestaan vier grootteslagen, te weten standaard, middenslag, dwerg en toy. De Poedel heeft een opgewekt karakter en is een fijne hond, die bovendien erg oud kan worden. <span>lees verder... </span></p>
-                        </div>
+            <div class="ras-box">
+                <a href="rassen/labrador.html">
+                    <img src="afbeeldingen/hondenRassen/labradorRetriever.jpg" alt="Labrador retriever"/>
+                    <div class="ras-content">
+                        <h2>Labrador</h2>
+                        <h4 class="readInfo">Ga naar pagina</h4>
+                        <p>De Labrador Retriever is een enorm populaire hond. De Labrador Retriever is van oorsprong een
+                            apporterende (jacht)hond, maar nu erg gewild als gezinshond. <span>lees verder... </span>
+                        </p>
                     </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p id="footerP">honden info, 2020 </p>
-        </footer>
+                </a>
+            </div>
+
+            <div class="ras-box">
+                <a href="rassen/poedel.html">
+                    <img src="afbeeldingen/poedel.jpg" alt="poedel">
+                    <div class="ras-content">
+                        <h2>Poedel</h2>
+                        <h4 class="readInfo">Ga naar pagina</h4>
+                        <p>De Poedel is een zeer oud ras. Er bestaan vier grootteslagen, te weten standaard, middenslag,
+                            dwerg en toy. De Poedel heeft een opgewekt karakter en is een fijne hond, die bovendien erg
+                            oud kan worden. <span>lees verder... </span></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>honden info, 2020 </p>
+</footer>
 
 </body>
 </html>

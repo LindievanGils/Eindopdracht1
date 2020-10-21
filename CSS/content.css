@@ -1,34 +1,19 @@
 /************** contact pagina **************/
-#email{
+.email{
     color: dodgerblue;
     font-weight: bold;
 }
 
-#email:hover{
+.email:hover{
     text-decoration: underline;
 }
-h1,h2,h3{
-    margin-bottom: 5px;
-}
-p:not(#footerP){
-    margin-bottom: 25px;
-}
 
-/*******Table**********/
-table{
-    max-width: 700px;
-}
-
-td.label{
-    width: 140px;
+input{
+    width: 220px;
 }
 td{
     padding: 5px;
     width: 100px;
-}
-/****text velden*/
-td input{
-    min-width: 200px;
 }
 
 /*input bericht*/
@@ -83,7 +68,16 @@ button:hover{
     overflow: hidden;
 }
 
-.ras-box p span:hover{
+.readInfo{
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
+
+.ras-box span:hover{
+    text-decoration: underline;
+}
+.readInfo:hover{
     text-decoration: underline;
 }
 
@@ -96,7 +90,7 @@ button:hover{
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     background-color: rgba(0,0,0,.6);
     padding: 5px 0;
     color: white;
@@ -117,10 +111,6 @@ button:hover{
 }
 
 /******************** detail pagina rassen ********************/
-#ras-img {
-    float: right;
-    max-width: 30%;
-}
 
 /*********************afbeeldingen pagina**************/
 .rassenAfbeelding > img{
@@ -133,15 +123,19 @@ button:hover{
 }
 
 
-/********************** wie zijn wij************************/
-.wieZijnWij img{
+/********************** wie zijn wij & honden rassen detail pagina************************/
+.wieZijnWij img:not(#banner), #ras-img{
     float: right;
     width: 400px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 10px ;
 }
 
 #content.wieZijnWij{
  min-height: 300px;
+}
+
+#banner{
+    width: 100%;
 }
 
 /***************************FLEXBOX****************************/
@@ -154,15 +148,13 @@ button:hover{
 .wrap{
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-
 }
-
 /***************** MEDIA QUERY MENU******************************/
 
 @media only screen and (max-width: 1024px)  {
        /*geschiedenis pagina*/
     #imgGeschiedenis{
-        padding: 4px 2% 0px 2%;
+        padding: 4px 2% 0 2%;
         width: 96%;
     }
 
@@ -172,12 +164,24 @@ button:hover{
         width: 350px;
     }
 
+    .ras-content{
+        height: 75px;
+    }
+
+    .readInfo{
+        visibility: visible;
+    }
+
     /* aanpassen animatie voor mobiele apparaten*/
     .ras-box:hover p{
         opacity: 0;
-        max-height: 0px;
+        max-height: 0;
         height: auto;
         padding: 5px;
+    }
+
+    .ras-box h2:hover{
+        text-decoration: underline;
     }
 
     /*onstaan van rassen pagina*/
@@ -195,11 +199,11 @@ button:hover{
         width: 80%;
     }
 
-    /* wie zijn wij pagina*/
-    .wieZijnWij img{
+    /* wie zijn wij pagina & ras img detail pagina*/
+    .wieZijnWij img:not(#banner), #ras-img{
         width: 300px;
         float: left;
-        margin-right: 20px;
+        margin: 0 20px 10px 0;
     }
 }
 
@@ -234,11 +238,26 @@ button:hover{
         width: 95%;
     }
 
-    /* wie zijn wij pagina*/
-    .wieZijnWij img{
+    /* wie zijn wij pagina & rassen detail pagina*/
+    .wieZijnWij img:not(#banner), #ras-img{
        width: 100%;
     }
 
 
+    /* contact pagina */
+    td{
+        width: 100%;
+        display: inline;
+        padding: 0;
+    }
 
+    td input{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    a.email{
+        font-size: 13px;
+        font-weight: bold;
+    }
 }
