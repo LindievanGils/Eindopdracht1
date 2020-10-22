@@ -1,3 +1,64 @@
+/************** Home pagina *****************/
+#background{
+    width: 100%;
+    min-height: 150px;
+    background-image:  url(../afbeeldingen/dogs-banner.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: bottom center;
+}
+#content.full-width{
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+#home {
+    padding: 0;
+}
+#home .flex-container{
+    flex-direction: row;
+}
+.block{
+    padding: 55px 20px 55px;
+    margin: 0 10%
+}
+.block img{
+    max-width: 100%;
+    height: auto;
+}
+.lr > div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.colored{
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 55px calc(20px + 10%) 55px;
+}
+.center{
+    text-align: center;
+}
+.button{
+    background-color: #7F9DAC;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    width: fit-content;
+    text-decoration: none;
+    
+}
+.button:hover{
+    transition: background-color .8s linear;
+    background-color: #5d7f90;
+}
+#home .afbeeldingen{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
 /************** contact pagina **************/
 .email{
     color: dodgerblue;
@@ -149,10 +210,18 @@ button:hover{
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+.fix-image{
+    align-items: center;
+}
 /***************** MEDIA QUERY MENU******************************/
 
 @media only screen and (max-width: 1024px)  {
-       /*geschiedenis pagina*/
+    /*home pagina*/
+    #home .afbeeldingen{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /*geschiedenis pagina*/
     #imgGeschiedenis{
         padding: 4px 2% 0 2%;
         width: 96%;
@@ -210,6 +279,20 @@ button:hover{
 
 
 @media screen and (max-width: 480px) {
+
+    /*home pagina*/
+    #home .flex-container{
+        flex-direction: column;
+    }
+    .lr > div{
+        width: auto;
+    }
+    #home .afbeeldingen{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #home .rassenAfbeelding img{
+        margin: 0;
+    }
 
     /*geschiedenis pagina*/
     #imgGeschiedenis{

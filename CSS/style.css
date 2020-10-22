@@ -82,6 +82,19 @@ header img{
 #menu a:hover{
     color: #cdcdcd;
 }
+#menu #dropdown{
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    background-color: #7F9DAC;
+    transform: scaleY(0);
+    transition: transform .7s ease-out;
+    transform-origin: top;
+}
+#menu a:hover + #dropdown, #menu #dropdown:hover{
+    visibility: visible;
+    transform: scaleY(1);
+}
 
 /************************** HAMBURGER MENU *********************/
 #hamburgerMenu{
@@ -154,6 +167,8 @@ footer p{
         display: flex;
         transform: scaleY(1);
         margin-top: 20px;
+        position: absolute;
+        z-index: 10000;
     }
     nav#menu:target ~ #hamburgerMenu #open-hamburger{
         display: none;

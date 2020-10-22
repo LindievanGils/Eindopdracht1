@@ -17,7 +17,14 @@
             <li><a href="index.html" id="current">Home</a></li>
             <li><a href="geschiedenis.html">Geschiedenis</a></li> <!--tekst pagina over rassen geschiedenis-->
             <li><a href="ontstaanRassen.html">Ontstaan van rassen</a></li>
-            <li><a href="rassen.html">Rassen</a></li> <!--overzichts pagina-->
+            <li><a href="rassen.html">Rassen</a>
+                <ul id="dropdown">
+                    <li><a href="rassen/bulldog.html">Bulldog</a></li>
+                    <li><a href="rassen/herder.html">Herder</a></li>
+                    <li><a href="rassen/labrador.html">Labrador</a></li>
+                    <li><a href="rassen/poedel.html">Poedel</a></li>
+                </ul>
+            </li> <!--overzichts pagina-->
             <li><a href="afbeeldingen.html">afbeeldingen</a></li>
             <li><a href="wieZijnWij.html">Wie zijn wij</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -28,13 +35,49 @@
         <a href="#" id="close-hamburger"><img alt="close-hamburger" src="afbeeldingen/close.png"></a>
     </div>
 </header>
-<main>
-    <section id="content">
-        <h2>
-            Dit is de titel van de Pagina,
-        </h2>
-        <p> test test test</p>
-        <p> alksghdslakghkldsahgkl</p>
+<main id="home">
+    <section id="content" class="full-width">
+        <div id="background"></div>
+        <div class="block center">
+            <h2>Welkom!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed massa at ligula convallis ornare id a nisi. Integer malesuada suscipit mauris, vitae vestibulum libero posuere eu. Nulla fringilla dui dolor, in feugiat turpis luctus ut. Vivamus eu elementum nulla. In hac habitasse platea dictumst. Mauris pulvinar elementum justo eget vestibulum. Vivamus tempus vulputate magna, sit amet dictum turpis rutrum quis. Vestibulum rhoncus efficitur lorem ut congue. Proin efficitur nisl et nibh elementum ullamcorper id non nisi. Duis lacinia purus in nisi semper iaculis. Integer gravida sit amet odio eget elementum. Vivamus cursus tellus eu condimentum iaculis. Donec laoreet venenatis vehicula. Proin imperdiet pharetra tristique. Curabitur aliquet ex in purus maximus, sed ornare tortor tincidunt. Praesent ac elementum sapien, et dapibus tortor.</p>
+        </div>
+
+        <div class="block flex-container colored lr">
+            <div>
+                <h3>Super veel informatie!</h3>
+                <p>Op deze website is superveel handigge informatie te vinden over honden! We hebben onder andere informatie over het onstaan van rassen, de geschiedenis en allerlij informatie over verschillende rassen. Beniuwd? Druk op de knop om een kijkje te nemen op de rassen pagina!</p>
+                <a class="button" href="rassen.html">Lees verder</a>
+            </div>
+            <div class="fix-image">
+                <img alt="hondjes" src="afbeeldingen/groepje-honden.png">
+            </div>
+        </div>
+
+        <div class="block center">
+            <h3>Gallerij</h3>
+            <p>Voor meer afbeeldingen kijkt u op de afbeeldingen pagina</p>
+            <div class="afbeeldingen">
+                <div class="rassenAfbeelding"><img src="afbeeldingen/hondenRassen/afganDog.jpg" alt="Afgan dog" /></div>
+                <div class="rassenAfbeelding"><img src="afbeeldingen/hondenRassen/beagle.jpg" alt="Beagle dog"/></div>
+                <div class="rassenAfbeelding"><img src="afbeeldingen/hondenRassen/berneseMountainDog.jpg" alt="Bernese mountain dog" /></div>
+                <div class="rassenAfbeelding"><img src="afbeeldingen/hondenRassen/bullTerrier.jpg" alt="Bull terrier dog"/></div>
+                <div class="rassenAfbeelding"><img src="afbeeldingen/hondenRassen/chineseCrested.jpg" alt="Chinese crested dog" /></div>
+                <div class="rassenAfbeelding"><img src="afbeeldingen/hondenRassen/dalmation.jpg" alt="Dalmatian dog" /></div>
+            </div>
+        </div>
+
+        <div class="block colored lr flex-container">
+            <div class="fix-image">
+                <img alt="hondjes" src="afbeeldingen/group2.png">
+            </div>
+            <div>
+                <h3>2de tekstblok home</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed massa at ligula convallis ornare id a nisi. Integer malesuada suscipit mauris, vitae vestibulum libero posuere eu. Nulla fringilla dui dolor, in feugiat turpis luctus ut. Vivamus eu elementum nulla. In hac habitasse platea dictumst. Mauris pulvinar elementum justo eget vestibulum. Vivamus tempus vulputate magna, sit amet dictum turpis rutrum quis.</p>
+                <a class="button" href="rassen.html">Lees verder</a>
+            </div>
+            
+        </div>
     </section>
 </main>
 <footer>
