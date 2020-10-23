@@ -10,7 +10,7 @@
 <body>
 <header>
     <h1>Honden info</h1>
-    <img src="afbeeldingen/Logo.png" height="400" width="400" alt="Illustratie hond"/>
+    <img src="afbeeldingen/Logo.png" alt="Illustratie hond"/>
     <nav id="menu">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -35,60 +35,52 @@
         <br>
         <p>Bij vragen kunt u contact met ons opnemen met het contact formulier op deze pagina, of door een mail te
             sturen naar <a href="mailto:lr.vangils@student.avans.nl" class="email">lr.vangils@student.avans.nl</a> of
-            <a href="mailto:n.schreuders@student.avans.nl" class="email">n.schreuders@student.avans.nl</a>
+            <a href="mailto:n.schreuders1@student.avans.nl" class="email">n.schreuders@student.avans.nl</a>
 
         </p>
         <p>Wij zullen u vraag zo spoedig mogelijk beantwoorden </p>
         <br>
-        <table>
-            <tr>
-                <td>
-                    <label>
-                        Naam:
-                    </label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>
-                        Email-adress:
-                    </label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>
-                        Onderwerp:
-                    </label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>
-                        Bericht:
-                    </label>
-               </td>
-                <td>
-                    <input type="text" id="bericht">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button>Versturen *</button>
-                </td>
-            </tr>
-        </table>
+        <form action="mailto:lr.vangils@student.avans.nl?subject=Contact hondenInfo" method="post" enctype="text/plain">
+            <table>
+                <tr>
+                    <td>
+                        <label>
+                            Naam:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="naam">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Onderwerp:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="onderwerp" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Bericht:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="bericht" name="bericht" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input id="button" type="submit" value="Vesturen">
+                    </td>
+                </tr>
+            </table>
+        </form>
         <br>
-        <p>* formulier is momenteel buitengebruik.</p>
     </section>
 </main>
 <footer>

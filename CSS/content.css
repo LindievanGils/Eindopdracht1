@@ -63,6 +63,7 @@
 .email{
     color: dodgerblue;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .email:hover{
@@ -70,11 +71,11 @@
 }
 
 input{
-    width: 220px;
+    width: 350px;
 }
 td{
     padding: 5px;
-    width: 100px;
+    width: 200px;
 }
 
 /*input bericht*/
@@ -83,14 +84,15 @@ input#bericht{
 }
 
 /*submit button*/
-button{
+#button{
     background-color: lightgrey;
     border: 1px solid gray;
     border-radius: 5px;
     padding: 3px;
+    width: 100px;
 }
 
-button:hover{
+#button:hover{
     background-color: gray;
 }
 
@@ -274,9 +276,18 @@ button:hover{
         float: left;
         margin: 0 20px 10px 0;
     }
+
+    /*Contact pagina*/
+    form, table{
+        width: 87%;
+    }
+    td:nth-of-type(2n){
+        width: 60%;
+    }
+    input{
+        width: 100%;
+    }
 }
-
-
 
 @media screen and (max-width: 480px) {
 
