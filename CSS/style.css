@@ -90,6 +90,7 @@ header img{
     transform: scaleY(0);
     transition: transform .7s ease-out;
     transform-origin: top;
+    padding-bottom: 5px;
 }
 #menu a:hover + #dropdown, #menu #dropdown:hover{
     visibility: visible;
@@ -145,13 +146,14 @@ footer p{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #7F9DAC;
     }
     header img{
         display: none;
     }
     nav#menu{
-        display: none;
-        transition: transform 2s ease-in-out;
+        visibility: hidden;
+        transition: transform 1s ease-in-out;
         height: auto;
         overflow: hidden;
         transform: scaleY(0);
@@ -164,7 +166,7 @@ footer p{
         display: none;
     }
     nav#menu:target{
-        display: flex;
+        visibility: visible;
         transform: scaleY(1);
         margin-top: 20px;
         position: absolute;
