@@ -4,44 +4,49 @@
     width: 100%;
     min-height: 150px;
     background-image:  url(../afbeeldingen/dogs-banner.png);
-    background-repeat: repeat-x;
+    background-repeat: repeat-x; /*herhalen op horizontaal niveau*/
     background-size: cover;
     background-position: bottom center;
 }
-#content.full-width{
+#content.full-width{ /*zodat hij niet content margin overneemt*/
     width:100%;
     margin: 0;
     padding: 0;
 }
-#home {
+#home { /*op main van homepagina*/
     padding: 0;
 }
+
 #home .flex-container{
     flex-direction: row;
 }
-.block{
+
+.block{ /*deel van homepagina*/
     padding: 55px 20px 55px;
     margin: 0 10%
 }
+
 .block img{
     max-width: 100%;
     height: auto;
 }
-.lr > div{
+
+.positieElementenInBlock > div{
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-self: center; /*tekst verticaal in het midden te zetten*/
 }
-.colored{
+
+.colored{ /*gekleurde achtergrond kleuren*/
     background-color: #F5F5F5;
     margin: 0;
-    padding: 55px calc(20px + 10%) 55px;
+    padding: 55px calc(20px + 10%) 55px calc(20px + 10%);
 }
 .center{
     text-align: center;
 }
-.button{
+a.button{
     background-color: #7F9DAC;
     padding: 10px 20px;
     border-radius: 10px;
@@ -51,14 +56,18 @@
     text-decoration: none;
     
 }
-.button:hover{
+a.button:hover{
     transition: background-color .8s linear;
     background-color: #5d7f90;
 }
-#home .afbeeldingen{
+#home .gallerijAfbeeldingen{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);/*3 afbeeldingen naast elkaar*/
     grid-template-rows: auto;
+}
+
+.fix-image{ /*afbeelding normale breedte*/
+    align-items: center;
 }
 /************** contact pagina **************/
 .email{
@@ -85,7 +94,7 @@ input#bericht{
 }
 
 /*submit button*/
-#button{
+#contactButton{
     background-color: lightgrey;
     border: 1px solid gray;
     border-radius: 5px;
@@ -93,7 +102,7 @@ input#bericht{
     width: 100px;
 }
 
-#button:hover{
+#contactButton:hover{
     background-color: gray;
 }
 
@@ -141,16 +150,12 @@ input#bericht{
 .ras-box span:hover{
     text-decoration: underline;
 }
-.readInfo:hover{
-    text-decoration: underline;
-}
-
 .ras-box img{
     height: 400px;
     width: 400px;
 }
 
-.ras-content{
+.rasTekst{
     width: 100%;
     text-align: center;
     position: absolute;
@@ -159,15 +164,15 @@ input#bericht{
     padding: 5px 0;
     color: white;
 }
-.ras-content p{
+.rasTekst p{ /* content is dicht */
     padding: 0;
     height: 0;
-    max-height: 0;
+    max-height: 0; /*voor animatie*/
     transition: max-height 2.5s;
     opacity: 0;
 }
 
-.ras-box:hover p{
+.ras-box:hover p{  /*content is open*/
     opacity: 1;
     max-height: 1000px;
     height: auto;
@@ -180,11 +185,9 @@ input#bericht{
     height: 250px;
     margin: 20px;
 }
-.wrap .afbeeldingen {
+.wrap .gallerijAfbeeldingen {
     text-align: center;
 }
-
-
 /********************** wie zijn wij & honden rassen detail pagina************************/
 .wieZijnWij img:not(#banner), #ras-img{
     float: right;
@@ -204,22 +207,15 @@ input#bericht{
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.wrap{
     -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.fix-image{
-    align-items: center;
+    justify-content: space-evenly;
 }
 /***************** MEDIA QUERY MENU******************************/
 
 @media only screen and (max-width: 1024px)  {
     /*home pagina*/
-    #home .afbeeldingen{
-        grid-template-columns: repeat(2, 1fr);
+    #home .gallerijAfbeeldingen{
+        grid-template-columns: repeat(2, 1fr); /*2 items naast elkaar*/
     }
     
     /*geschiedenis pagina*/
@@ -234,11 +230,11 @@ input#bericht{
         width: 350px;
     }
 
-    .ras-content{
+    .rasTekst{
         height: 75px;
     }
 
-    .readInfo{
+    .readInfo{ /*link is nu zichtbaar*/
         visibility: visible;
     }
 
@@ -291,13 +287,13 @@ input#bericht{
 @media screen and (max-width: 480px) {
 
     /*home pagina*/
-    #home .flex-container{
+    #home .flex-container{ /*afbeelding in colomn ding*/
         flex-direction: column;
     }
-    .lr > div{
+    .positieElementenInBlock > div{
         width: auto;
     }
-    #home .afbeeldingen{
+    #home .gallerijAfbeeldingen{
         grid-template-columns: repeat(1, 1fr);
     }
     #home .rassenAfbeelding img{

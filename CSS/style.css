@@ -12,7 +12,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', serif;
+    font-family: 'Raleway', 'Tahoma',serif;/*serif is genetic defaut*/
 }
 html {
     height: 100%;
@@ -33,7 +33,6 @@ header
     top: 0;
     height: 100px;
     color: white;
-
 }
 
 nav#menu{
@@ -42,15 +41,16 @@ nav#menu{
     width: 100%;
     height: 35px;
     background-color:#7F9DAC;
-    display: flex;
+    display: flex; /*menu verticaal te centreren*/
 }
+
+/*enkel tekst: honden Info*/
 h1{
-    font-family: "GloriaHallelujah", serif;
+    font-family: "GloriaHallelujah", 'Tahoma', serif ;/*serif is genetic defautl*/
     margin-left: 20px;
     font-size: 40px;
     color: #260D00;
 }
-
 
 header img{
     position: absolute;
@@ -62,7 +62,7 @@ header img{
 }
 
 #menu ul{
-    display: flex;
+    display: flex;/*voor menu items op een rijtje te zetten.*/
     list-style: none;
     justify-content: space-around;
     align-items: center;
@@ -76,20 +76,24 @@ header img{
     font-weight: bold;
     letter-spacing: 3px;
 }
+/*huidige pagina*/
 #current{
     border-bottom: 5px solid gray;
 }
+
 #menu a:hover{
     color: #cdcdcd;
 }
+
+/******** DROP DOWN MENU, RASSEN PAGINA *****************/
 #menu #dropdown{
-    visibility: hidden;
+    visibility: hidden; /*display hidden, omdat animatie anders niet werkt.*/
     position: absolute;
     left: 0;
     background-color: #7F9DAC;
-    transform: scaleY(0);
-    transition: transform .7s ease-out;
-    transform-origin: top;
+    transform: scaleY(0); /*voor animatie, van hoogte veranderen */
+    transition: transform .7s ease-out; /*snelheid van animatie*/
+    transform-origin: top;/*Richting uitklappen animatie*/
     padding-bottom: 5px;
 }
 #menu a:hover + #dropdown, #menu #dropdown:hover{
@@ -98,11 +102,12 @@ header img{
 }
 
 /************************** HAMBURGER MENU *********************/
-#hamburgerMenu{
+#hamburgerMenu{ /*niet weergeven bij groter dan 1024px*/
     display: none;
 }
-
 /**************************** CONTENT (SECTION) ***************************/
+
+/*main waar de content instaat, alles tussen footer en header*/
 main{
     min-height: calc(100vh - 185px);
     width: 100%;
@@ -110,13 +115,13 @@ main{
     background-color: #F5F5F5;
     padding-top: 20px;
     padding-bottom: 40px;
-
 }
 
+/*section waar alles instaat*/
 #content{
     margin: 0 10% 0 10%;
     background-color: white;
-    width: calc(80% - 50px);
+    width: calc(80% - 40px);
     height: fit-content;
     min-height: 100px;
     padding: 20px;
@@ -127,7 +132,6 @@ main{
 footer{
     width: 100%;
     height: 25px;
-    bottom: 0;
     background-color: gray;
     text-align: center;
     color: white;
@@ -137,51 +141,51 @@ footer p{
     margin: 0;
 }
 
-/***************** MEDIA QUERY's MENU ******************************/
+/***************** MEDIA QUERY's MENU  (ALLE VOOR DROP DOWN MENU) ******************************/
 @media only screen and (max-width: 1024px)  {
     #menu ul{
-        flex-direction: column;
+        flex-direction: column; /*verander flex direction*/
     }
     header{
-        display: flex;
+        display: flex; /*positionering dropdown (tekst en knop)*/
         justify-content: space-between;
         align-items: center;
         background-color: #7F9DAC;
     }
-    header img{
+    header img{ /*verstoppen hondje*/
         display: none;
     }
     nav#menu{
-        visibility: hidden;
-        transition: transform 1s ease-in-out;
+        visibility: hidden; /*standard menu niet zichtbaar,tot drukken op de knop*/
+        transition: transform 1s ease-in-out; /*animatie*/
         height: auto;
-        overflow: hidden;
         transform: scaleY(0);
         transform-origin: top;
     }
     #hamburgerMenu{
-        display: inline-block;
+        display: inline-block; /*gewoon van none af*/
     }
     #close-hamburger{
-        display: none;
+        display: none; /*als menu dichtstaat, knop niet zichtbaar*/
     }
-    nav#menu:target{
+    nav#menu:target{ /*als in url klasnaam staat word dit uitgevoerd.*/
+       /*openen menu*/
         visibility: visible;
         transform: scaleY(1);
         margin-top: 20px;
         position: absolute;
         z-index: 10000;
     }
-    nav#menu:target ~ #hamburgerMenu #open-hamburger{
+    nav#menu:target ~ #hamburgerMenu #open-hamburger{ /*als menu open, verstoppen menu knop voor openen*/
         display: none;
     }
-    nav#menu:target ~ #hamburgerMenu #close-hamburger{
+    nav#menu:target ~ #hamburgerMenu #close-hamburger{ /*laat knop verschijnen als menu open is*/
         display: inline-block;
     }
     
     #hamburgerMenu img{
         display: inline-block;
-        position: static;
+        position: static; /*zo laten als hij hoort, anders nam hij positie hond over.*/
         padding-right: 20px;
         width: 30px;
         height: 30px;
