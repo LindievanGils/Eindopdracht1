@@ -186,16 +186,4 @@ footer p{
         width: 30px;
         height: 30px;
     }
-
-    /*kleur achtergrond*/
-    main {
-        background-color: yellow;
-    }
-}
-
-@media only screen and (max-width: 480px)  {
-    /*kleur achtergrond*/
-    main {
-        background-color: purple;
-    }
 }

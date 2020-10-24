@@ -1,3 +1,4 @@
+
 /************** Home pagina *****************/
 #background{
     width: 100%;
@@ -172,8 +173,6 @@ input#bericht{
     height: auto;
     padding: 5px;
 }
-
-/******************** detail pagina rassen ********************/
 
 /*********************afbeeldingen pagina**************/
 .rassenAfbeelding > img{
